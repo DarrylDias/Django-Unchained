@@ -1,0 +1,34 @@
+body {
+    padding-top: 120px;
+    font-family: Arial;
+}
+
+.site-title,
+.post-content,
+.post-meta,
+.post-tags,
+.tag-title,
+.tag-list,
+.post-title {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.tag-list {
+    font-style: italic;
+}
+
+.site-title {
+    padding-bottom: 25px;
+}
+
+a:link, a:visited {
+    color: slateGrey;
+    text-decoration: none;
+    border-bottom: 1px slateGrey;
+}
+
+a:hover {
+    color: #444;
+    border-bottom-color: #444;
+}
