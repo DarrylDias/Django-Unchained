@@ -9,9 +9,15 @@ body {
 .post-tags,
 .tag-title,
 .tag-list,
+.footer,
 .post-title {
     width: 500px;
     margin: 0 auto;
+}
+
+.footer {
+    padding-top: 10px;
+    text-align: center;
 }
 
 .tag-list {

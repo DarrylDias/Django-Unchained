@@ -1,7 +1,21 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import ListView, DetailView
 from blog.models import Post
+from django.contrib.syndication.views import Feed
 
+class BlogFeed(Feed):
+    title = "Snaker Blog"
+    description = "The Blog written by a Python"
+    link = "/feed/"
+
+    def items(self):
+        return Post.objects.all().order_by("-created")
+    def item_title(self, item):
+        return item.title
+    def item_description(self, item):
+        return item.body
+    def item_link(self, item):
+        return u"/blog/%d" % item.id
 
 urlpatterns = patterns('blog.views',
     url(r'^$', ListView.as_view(
@@ -16,4 +30,5 @@ urlpatterns = patterns('blog.views',
      					    queryset=Post.objects.all().order_by("-created"),
      						template_name="archives.html")),  
     url(r'^tag/(?P<tag>\w+)$', 'tagpage'),
+    url(r'^feed/$', BlogFeed()),
 )
