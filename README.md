@@ -31,6 +31,5 @@ pip install -r requirements.txt # You might require sudo, If you are running it 
 
 
 * To access the Admin panel visit http://your-ip-/admin
-* 
 
 If you find any bugs report [here](https://github.com/DarrylDias/Django-Unchained/issues).
