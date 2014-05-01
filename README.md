@@ -1,19 +1,36 @@
 Django-Unchained
 ==============
 
-A blogging system written by me in Python Django 1.6.1
+Django-Unchained is a Blogging Platform written in Python built using Django framework. This project was made for Fun!. We recommend use of VirtualEnv to run this project. Feel free to contribute.
 
-Developed using Python-Virtualenv and Emacs.
+#### Things required to run this Django project.
 
-Requirements:
+* Python Pip
+* Django 1.6.1 or highier 
+* Sqlite3
 
-django-taggit.
-Sqlite3
+#### Fetching dependencies 
 
----
+* Run the command below to fetch the dependencies required by this project.
 
-Installing:
+```
+pip install -r requirements.txt # You might require sudo, If you are running it system level.
+```
 
-./manage.py syncdb
 
+
+#### Starting Development Server.
+
+* We need to run SyncDB too create a database file if Sqlite3 is used and create table and user to get it working.
+
+* You can start the Development Server by running the command below.
+
+```
 ./manage.py runserver
+```
+
+
+* To access the Admin panel visit http://your-ip-/admin
+* 
+
+If you find any bugs report [here](https://github.com/DarrylDias/Django-Unchained/issues).
